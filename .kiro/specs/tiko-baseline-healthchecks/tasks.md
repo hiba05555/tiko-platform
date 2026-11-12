@@ -27,7 +27,7 @@ The Docker Compose healthcheck stanzas, env-var enforcement, and gateway `depend
     - Confirm the existing `docker compose up --build` command is in a fenced code block in that section (do not remove or change it)
     - Add a brief paragraph or sub-section after the startup command that tells developers about the two pre-flight scripts:
       - `sh scripts/check-compose-healthchecks.sh` (Linux / macOS / CI)
-      - `pwsh -File scripts/check-compose-healthchecks.ps1` (Windows)
+      - `powershell -File scripts/check-compose-healthchecks.ps1` (Windows)
     - Description must state these scripts verify that every `service_healthy` dependency declares a healthcheck without starting any containers
     - _Requirements: 4.1, 4.2_
 
@@ -55,7 +55,7 @@ The Docker Compose healthcheck stanzas, env-var enforcement, and gateway `depend
     - If any service stays unhealthy: show its logs (`docker compose logs <service>`), show the exact healthcheck command from `docker inspect <container>`, identify the root cause — do NOT increase timeouts as a first response
     - _Requirements: 1.4, 1.5, 2.2, 2.3, 3.4, 3.5_
   - [~] 4.5 Run the PowerShell script and show its exit code
-    - Run `pwsh -File scripts/check-compose-healthchecks.ps1`
+    - Run `powershell -File scripts/check-compose-healthchecks.ps1`
     - Show the raw output and confirm exit code is 0
     - _Requirements: 5.2, 5.3, 5.4_
 
@@ -69,7 +69,7 @@ The Docker Compose healthcheck stanzas, env-var enforcement, and gateway `depend
 ## Notes
 
 - Task 1 is a spec housekeeping fix; it does not affect runtime behaviour
-- Task 4.1 and 4.5 require `jq` and `pwsh` respectively to be on `PATH`; if either is absent, stop and report it — do not install or work around
+- Task 4.1 and 4.5 require `jq` and `powershell` respectively to be on `PATH`; if either is absent, stop and report it — do not install or work around
 - Task 4.2 creates and deletes a temporary file outside the repository; nothing in the repo is modified by that task
 - Task 4.4 starts the live stack with `.env` (not `.env.example`) — a real `.env` with filled credentials must exist before running this task
 - Both `.sh` and `.ps1` scripts must co-exist; they are companions for different platforms

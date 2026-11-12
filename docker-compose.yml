@@ -125,14 +125,14 @@ services:
       postgres:
         condition: service_healthy
     # eclipse-temurin:21-jre-alpine ships busybox wget only (no curl).
-    # start_period covers the JVM boot plus DB connection; retries keep the
-    # transition to unhealthy reasonably quick (~60s) when the DB goes away.
+    # Grounded in measurement, not guesswork: cold start is ~145s under the
+    # 0.75 CPU cap, so the probe must not fail before boot finishes.
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8081/actuator/health | grep -q UP || exit 1"]
       interval: 10s
       timeout: 3s
       retries: 6
-      start_period: 60s
+      start_period: 180s
 
   appointment-service:
     build: ./backend/appointment-service
@@ -159,7 +159,7 @@ services:
       interval: 10s
       timeout: 3s
       retries: 6
-      start_period: 60s
+      start_period: 180s
 
   profile-notification-service:
     build: ./backend/profile-notification-service
@@ -186,7 +186,7 @@ services:
       interval: 10s
       timeout: 3s
       retries: 6
-      start_period: 60s
+      start_period: 180s
 
   api-gateway:
     build: ./backend/api-gateway
@@ -229,7 +229,7 @@ services:
       interval: 10s
       timeout: 3s
       retries: 6
-      start_period: 60s
+      start_period: 180s
 
   frontend:
     build:

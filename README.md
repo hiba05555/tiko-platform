@@ -43,7 +43,7 @@ databases and login roles for the queue, appointment, and profile-notification s
    sh scripts/check-compose-healthchecks.sh
 
    # Windows (PowerShell)
-   pwsh -File scripts/check-compose-healthchecks.ps1
+   powershell -File scripts/check-compose-healthchecks.ps1
    ```
 
 3. Open http://localhost:3000. The Keycloak console is at http://localhost:8080/admin; its
@@ -65,6 +65,19 @@ and gateway-secret volumes.
 PostgreSQL's `db/init.sh` runs only when the data volume is initialized for the first time. If
 database names, users, or passwords change later, update the existing database roles manually or
 remove the PostgreSQL volume and recreate it; removing that volume deletes all service data.
+
+## Health and startup checks
+
+`docker compose ps` reports `healthy` for every service that declares a healthcheck. The gateway
+starts only after the three backend services report healthy (`depends_on: condition:
+service_healthy`). The backend probes call `/actuator/health` with `wget` — the alpine JRE image
+ships no curl — and use a 180s `start_period` because a cold Spring Boot start measures ~145s
+under the container CPU limits; a tighter budget marks a still-booting service as unhealthy.
+
+The pre-flight check under "Run locally" runs `docker compose --env-file .env.example config`,
+starts no containers, and exits non-zero if a `depends_on: condition: service_healthy` target has
+no healthcheck. The shell script honors the standard `COMPOSE_FILE` variable; the PowerShell
+script accepts a `-ComposeFile` parameter.
 
 ## API
 
