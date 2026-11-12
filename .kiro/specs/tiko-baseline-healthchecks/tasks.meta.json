@@ -1,0 +1,189 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Update the two stale references in `requirements.md`": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438394525
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438399404
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438450898
+      }
+    ],
+    "2.1 Write `scripts/check-compose-healthchecks.sh`": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395170
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438402207
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438453963
+      }
+    ],
+    "3.1 Add check-script mention to the \"Run locally\" section of `README.md`": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395357
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438457528
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438868257
+      }
+    ],
+    "4.1 Run check-compose-healthchecks.sh (positive test)": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395489
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438460385
+      },
+      {
+        "executionId": "0fbe452c-bdb7-46f2-8864-96a956d565a2",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439033038
+      },
+      {
+        "executionId": "0fbe452c-bdb7-46f2-8864-96a956d565a2",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439036606
+      },
+      {
+        "executionId": "0fbe452c-bdb7-46f2-8864-96a956d565a2",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439214791
+      },
+      {
+        "executionId": "29f5a9a9-b35e-4c2a-bb35-6eaa75f3927a",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439317401
+      },
+      {
+        "executionId": "29f5a9a9-b35e-4c2a-bb35-6eaa75f3927a",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439551536
+      },
+      {
+        "executionId": "aaa2971a-ef49-465b-8a19-25050cccb1e3",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439933574
+      },
+      {
+        "executionId": "aaa2971a-ef49-465b-8a19-25050cccb1e3",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794440287005
+      }
+    ],
+    "4.2 Negative test: script catches a missing healthcheck": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395578
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438463416
+      },
+      {
+        "executionId": "0fbe452c-bdb7-46f2-8864-96a956d565a2",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794439033591
+      },
+      {
+        "executionId": "aaa2971a-ef49-465b-8a19-25050cccb1e3",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794440290488
+      },
+      {
+        "executionId": "2d76907b-7a5c-4ff0-94f4-2465a15478ae",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794475465905
+      }
+    ],
+    "4.3 Confirm script size and no container-starting commands": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395668
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438466349
+      },
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438871244
+      }
+    ],
+    "4.4 Live stack proof: all healthchecks show \"healthy\"": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395838
+      }
+    ],
+    "4.5 Run the PowerShell script and show its exit code": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395904
+      }
+    ],
+    "5.1 List every file changed or created": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438395985
+      }
+    ],
+    "1. Fix script name in requirements.md": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438450955
+      }
+    ],
+    "2. Create the POSIX sh verification script": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438454024
+      }
+    ],
+    "3. Update README to mention both check scripts": [
+      {
+        "executionId": "4280b9fa-0ff2-4447-b70a-63800d82f325",
+        "chatSessionId": "sess_cf2878b7-15bc-4e84-91bc-9ae8e0595745",
+        "timestamp": 1794438868340
+      }
+    ]
+  }
+}

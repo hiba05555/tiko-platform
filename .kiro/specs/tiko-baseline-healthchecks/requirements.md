@@ -20,7 +20,7 @@ This feature adds a `healthcheck` stanza to each of the three business services 
 - **Env_File**: The file `.env` at the repository root, created by the developer by copying `.env.example` before first run.
 - **Env_Example**: The file `.env.example` at the repository root, committed to the repository, listing every required variable with placeholder values.
 - **Required_Variable**: Any environment variable consumed by `docker-compose.yml` whose absence would cause a service to start incorrectly or silently — specifically: `KC_ADMIN`, `KC_ADMIN_PASSWORD`, `POSTGRES_SUPERUSER`, `POSTGRES_SUPERUSER_PASSWORD`, `QUEUE_DB_NAME`, `QUEUE_DB_USER`, `QUEUE_DB_PASSWORD`, `APPOINTMENTS_DB_NAME`, `APPOINTMENTS_DB_USER`, `APPOINTMENTS_DB_PASSWORD`, `PROFILES_DB_NAME`, `PROFILES_DB_USER`, `PROFILES_DB_PASSWORD`, `TIKO_CLIENT_PASSWORD`, `TIKO_AGENT_PASSWORD`, `TIKO_ADMIN_PASSWORD`, `KEYCLOAK_PORT`, `GATEWAY_PORT`, `FRONTEND_PORT`, and `FRONTEND_DEV_PORT`.
-- **Verification_Script**: The shell script `scripts/check-healthchecks.sh` at the repository root that performs a static check of `docker compose --env-file .env.example config` output, allowing it to run on a fresh clone and in CI without a real `.env` file.
+- **Verification_Script**: The shell script `scripts/check-compose-healthchecks.sh` at the repository root that performs a static check of `docker compose --env-file .env.example config` output, allowing it to run on a fresh clone and in CI without a real `.env` file.
 
 ---
 
@@ -96,7 +96,7 @@ This feature adds a `healthcheck` stanza to each of the three business services 
 
 #### Acceptance Criteria
 
-1. WHEN the repository is inspected, THE repository SHALL contain the Verification_Script at `scripts/check-healthchecks.sh` with no more than 30 lines of shell code.
+1. WHEN the repository is inspected, THE repository SHALL contain the Verification_Script at `scripts/check-compose-healthchecks.sh` with no more than 30 lines of shell code.
 
 2. WHEN the Verification_Script is executed, THE Verification_Script SHALL run `docker compose --env-file .env.example config` against the `docker-compose.yml` at the repository root and parse the output to identify every service listed as a `condition: service_healthy` dependency, so that the script works on a fresh clone and in CI without a real `.env` file.
 

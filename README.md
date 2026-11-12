@@ -34,6 +34,18 @@ databases and login roles for the queue, appointment, and profile-notification s
    docker compose up --build
    ```
 
+   **Pre-flight check (optional)**
+
+   Before starting the stack, verify that every `service_healthy` dependency declares a healthcheck — without starting any containers:
+
+   ```sh
+   # Linux / macOS / CI
+   sh scripts/check-compose-healthchecks.sh
+
+   # Windows (PowerShell)
+   pwsh -File scripts/check-compose-healthchecks.ps1
+   ```
+
 3. Open http://localhost:3000. The Keycloak console is at http://localhost:8080/admin; its
    credentials are `KC_ADMIN` and `KC_ADMIN_PASSWORD` from `.env`. Test accounts are `client`,
    `agent`, and `admin`; their passwords are the corresponding `TIKO_*_PASSWORD` values.
